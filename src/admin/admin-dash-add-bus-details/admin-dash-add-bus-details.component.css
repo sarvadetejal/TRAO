@@ -1,0 +1,56 @@
+*{
+   font-family: "Poppins", sans-serif;
+}
+.Details-container {
+  width: 1120px;
+  height: 620px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addbus-container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.lblname-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+td {
+  width: 200px;
+  height: 60px;
+}
+input{
+  width:330px;
+  height:40px;
+  border:1px thin rgb(175, 167, 167);
+  outline:none;
+  padding-left:10px;
+  color:rgb(59, 55, 55);
+}
+select{
+  width:150px;
+  height:35px;
+  outline:none;
+  text-align: center;
+  padding:5px;
+}
+option{
+  border-top-left-radius: 1px;
+}
+form{
+  display:grid;
+  place-items:center;
+}
+table{
+  margin-top:25px;
+}
+button{
+  width:100px;
+  outline:none;
+}

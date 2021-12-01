@@ -1,0 +1,16 @@
+<div class="intro-container">
+  <div class="intro-contents">
+    <h1>Admin Login </h1>
+    <form [formGroup]="AdminLoginForm" (ngSubmit)="LoginAdmin()">
+      <label>Admin Id</label>
+      <input type="text" formControlName="AdminId" name="AdminId" id="AdminId" />
+      <label>Password</label>
+      <input type="password" formControlName="AdminPassword" name="AdminPassword" id="AdminPassword" />
+      <div></div>
+      <div class="Button-grid">
+        <button type="submit" mat-raised-button color="primary" id="login-btn">Login</button>
+        <button mat-raised-button color="warn" id="cancel-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

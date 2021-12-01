@@ -1,0 +1,60 @@
+<div class="home-dashboard">
+  <div class="search-container">
+    <form class="search-form" [formGroup]="searchForm" (ngSubmit)="SearchBus()">
+      <label class=" label1 spacer">From<input type="text" class="inputField" name="from-location"
+          formControlName="SourceLoc" placeholder="search city" /></label>
+      <label class="spacer">Destination<input type="text" class="inputField" name="To-location"
+          formControlName="DestinationLoc" placeholder="search city" /></label>
+      <label class="spacer">Dates<input type="date" class="inputField" name="Date" formControlName="ScheduleDate" />
+      </label>
+      <button class="spacer" type="submit" name="Search-btn" (click)="SearchBus()">Search Bus</button>
+    </form>
+  </div>
+  <div class="Bus-Details-Container">
+    <h4>
+      Bus Availability
+    </h4>
+    <div class="user-card-container">
+      <div class="user-card-form-container" >
+        <div class="bus-card-container"*ngFor="let buss of buslist;let i = index">
+          <label class="busnamelbl">
+            {{buss.busName}}
+          </label>
+          <label class="timecontainer">
+            Departure Time
+            <span>
+              {{scheduleslist[i].departureTime}}
+            </span>
+          </label>
+          <label class="timecontainer">
+            Arrival Time
+            <span>
+              {{scheduleslist[i].arrivalTime}}
+            </span>
+          </label>
+          <label>
+            {{scheduleslist[i].fare}}
+          </label>
+          <label class="btn-st">
+            {{buss.busSeats}}
+              <ng-template #template>
+                <div class="modal-body">
+                  <button type="button">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <app-user-seating [bus]="buss" [fare]="scheduleslist[i].fare"></app-user-seating>
+                </div>
+              </ng-template>
+            <button class="btn-seats" (click)="openDialog(template)">
+              check Seats
+            </button>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+

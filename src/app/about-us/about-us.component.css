@@ -1,0 +1,34 @@
+*{
+    font-family: "Poppins",sans-serif;
+  }
+  .intro-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  background-size: 100% auto;
+  }
+  .intro-contents {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height: 50vh;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+  }
+.intro-contents{
+  transition: 1s;
+}
+.image-Container{
+  width:520px;
+  height:300px;
+  box-shadow: 10px 5px 32px -20px;
+  background-image: url(../../assets/hire-semi-luxury-bus-pune-mumbai.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

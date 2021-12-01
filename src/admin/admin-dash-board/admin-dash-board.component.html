@@ -1,0 +1,64 @@
+<div class="ad-dash-mainCont">
+  <div class="ad-dash-sidebar-Cont">
+    <div class="ad-dashsdbr-menus">
+      <h5 class="admin-name">
+        AdminId
+      </h5>
+      <mat-accordion>
+        <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Bus
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="menu-items-btns">
+          <button class="menu-btn" mat-raised-button (click)="AddBus()">Add Bus</button>
+          <button class="menu-btn" mat-raised-button (click)="UpdateBus()">Update Bus</button>
+        </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Schedule
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="menu-items-btns">
+            <button class="menu-btn" mat-raised-button (click)="AddSchedule()">Add Schedule</button>
+            <button class="menu-btn" mat-raised-button (click)="UpdateSchedule()">Update Schedule</button>
+            <button class="menu-btn" mat-raised-button (click)="ShowSchedule()">Show Schedule</button>
+          </div>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </div>
+  </div>
+  <div class="ad-dashchild-cont">
+  <div class="child-comp-container" [(ngModel)]="ChooseComponent">
+        <div [ngSwitch]="ChooseComponent">
+          <div *ngSwitchCase="'Add Bus'">
+            <app-admin-dash-add-bus-details></app-admin-dash-add-bus-details>
+          </div>
+
+          <div *ngSwitchCase="'Update Bus'">
+                  <app-admin-dash-update-bus-details></app-admin-dash-update-bus-details>
+          </div>
+
+          <div *ngSwitchCase="'Add Schedule'">
+              <app-admin-dash-add-schedule></app-admin-dash-add-schedule>
+          </div>
+
+          <div *ngSwitchCase="'Update Schedule'">
+              <app-admin-dash-update-schedule></app-admin-dash-update-schedule>
+          </div>
+
+          <div *ngSwitchCase="'Show Schedule'">
+              <app-admin-dash-show-schedule></app-admin-dash-show-schedule>
+          </div>
+
+          <div *ngSwitchDefault>
+            <app-admin-dash-add-bus-details></app-admin-dash-add-bus-details>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

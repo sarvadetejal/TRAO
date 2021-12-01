@@ -1,0 +1,15 @@
+<mat-toolbar class="mat-elevation-z5">
+  <svg viewBox="0 0 50 50" routerLink="">
+    <text x="50%" y="65%" fill="transparent" text-anchor="middle" class="logo-name">TRAO</text>
+  </svg>
+  <div class="spacer"></div>
+  <a class="link-name">ADMIN ACCESS</a>
+  <a class="link-name"> </a>
+  <div *ngIf="!message">
+    <a class="link-name" routerLink="adminLogin" mat-button>Login</a>
+  </div>
+  <div *ngIf="message">
+    <a class="link-name" mat-raised-button (click)="Logout()">Logout</a>
+  </div>
+</mat-toolbar>
+

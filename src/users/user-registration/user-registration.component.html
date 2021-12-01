@@ -1,0 +1,23 @@
+<!-- <app-user-profile>
+
+</app-user-profile> -->
+<div class="intro-container">
+  <div class="intro-contents">
+    <h1>Register</h1>
+    <form [formGroup]="UserForm" (ngSubmit)="RegisterUser()">
+      <label>Username</label>
+      <input type="text" formControlName="UserName" name="username" id="username" />
+      <label>Email</label>
+      <input type="text" formControlName="UserEmail" name="emailId" id="emailId" />
+      <label>Password</label>
+      <input type="text" formControlName="UserPassword" name="password" id="password" />
+      <label>Phone no</label>
+      <input type="number" formControlName="UserPhone" name="phoneno" id="phoneno" />
+      <div></div>
+      <div class="Button-grid">
+        <button type="submit" mat-raised-button color="primary" id="login-btn">Register</button>
+        <button mat-raised-button color="warn" id="cancel-btn" (click)="CancelAct()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

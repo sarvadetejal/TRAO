@@ -1,0 +1,38 @@
+<div class="Show-status-container">
+  <div class="table-container">
+    <h3>
+      SCHEDULE OF BUS
+    </h3>
+    <table>
+      <tr>
+        <th>SCHEDULE_ID</th>
+        <th>BUS_ID</th>
+        <th>SRC_LOC</th>
+        <th>DEST_LOC</th>
+        <th>SCH_DATE</th>
+        <th>DEP_TIME</th>
+        <th>ARR_TIME</th>
+        <th>FARE</th>
+        <th>ACTIONS</th>
+      </tr>
+      <tr *ngFor="let sd of scheduleDetails; let j=index">
+        <td>{{sd.scheduleId}}</td>
+        <td>{{sd.busId}}</td>
+        <td>{{sd.sourceLoc}}</td>
+        <td>{{sd.destinationLoc}}</td>
+        <td>{{sd.scheduleDate}}</td>
+        <td>{{sd.departureTime}}</td>
+        <td>{{sd.arrivalTime}}</td>
+        <td>{{sd.fare}}</td>
+        <td>
+          <ng-template #template>
+            <div class="modal-body">
+              <app-admin-dash-update-schedule [ScheduleId]="sd.scheduleId"></app-admin-dash-update-schedule>
+            </div>
+          </ng-template>
+          <button type="button" mat-raised-button color="primary" (click)="openDialog(template)">Update</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="Details-container">
+  <div class="addbus-container">
+    <form [formGroup]="UpdateScheduleForm" (ngSubmit)="UpdateSchedule()">
+      <h3>
+        Update Schedule
+      </h3>
+      <table>
+        <tr>
+          <td>
+            Schedule id
+          </td>
+          <td>
+            <select formControlName="ScheduleId">
+              <option *ngFor="let ids of scheduleDetails" [ngValue]="ids.scheduleId">S{{ids.scheduleId}}
+              </option>
+            </select>
+          </td>
+          <td>
+            <button mat-raised-button color="primary" (click)="showDataOnID()">
+              ShowData
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Source</td>
+          <td><input type="text" formControlName="SourceLoc" /></td>
+          <td>Destination</td>
+          <td><input type="text" formControlName="DestinationLoc" /></td>
+        </tr>
+        <tr>
+          <td>BusId</td>
+          <td><select formControlName="BusId">
+              <option *ngFor="let ids of busDetails" [ngValue]="ids.busId">B{{ids.busId}}</option>
+            </select></td>
+
+          <!-- <td>Bus Plate No</td>
+            <td><select type="text" [(ngModel)]="BusIdVal">
+                <option *ngIf="" [value]="" formControlName="BusNo">MH12 GH 2058</option>
+              </select></td> -->
+        </tr>
+        <tr>
+          <td>Schedule Date</td>
+          <td><input type="date" formControlName="ScheduleDate" ng-model="date" /></td>
+        </tr>
+        <tr>
+          <td>Departure time</td>
+          <td><input type="time" ngxTimeMask formControlName="DepartureTime" /></td>
+
+          <td style="margin-left:25px">Arrival time</td>
+          <td><input type="time" formControlName="ArrivalTime" ng-model="time" /></td>
+          </tr>
+          <tr>
+            <td>Amount</td>
+            <td><input type="number" formControlName="Fare" /></td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td rowspan="2">
+              <div>
+                <button mat-raised-button color="primary" type="submit">
+                  Update Schedule
+                </button>
+              </div>
+            </td>
+          </tr>
+      </table>
+    </form>
+  </div>
+</div>

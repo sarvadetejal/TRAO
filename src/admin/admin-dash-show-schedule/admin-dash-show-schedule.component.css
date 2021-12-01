@@ -1,0 +1,33 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.Show-status-container {
+  width: 1120px;
+  height: 620px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-container {
+  width: 80%;
+  height: 95%;
+  display: grid;
+  place-items:center;
+  overflow-y: scroll;
+}
+table,td, th {
+  border: 1px solid rgb(139, 127, 127);
+}
+td {
+  width: auto;
+  height: 40px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-y: scroll;
+}
+button{
+  outline:none;
+  margin:5px;
+}

@@ -1,0 +1,22 @@
+<mat-toolbar class="mat-elevation-z5">
+  <svg viewBox="0 0 50 50" routerLink="">
+    <text x="50%" y="65%" fill="transparent" text-anchor="middle" class="logo-name">TRAO</text>
+  </svg>
+  <div class="spacer"></div>
+  <a class="link-name" [routerLink]="['./','home']" routerLinkActive="active" mat-button>Home</a>
+  <a class="link-name"[routerLink]="['./','aboutus']" routerLinkActive="active" mat-button>Aboutus</a>
+  <div *ngIf="!message">
+
+    <a class="link-name" [routerLink]="['./','login']" routerLinkActive="active" mat-button>UserLogin</a>
+    <a class="link-name" [routerLink]="['./','adminlogin']" routerLinkActive="active" mat-button>AdminLogin</a>
+    <!-- <a class="link-name" routerLink="buslist" mat-button>Buslist</a> -->
+    <a class="link-name" [routerLink]="['./','register']" mat-raised-button routerLinkActive="active">Register</a>
+  </div>
+  <div *ngIf="message">
+    <a class="link-name" [routerLink]="['./','userProfile']" routerLinkActive="active" mat-button>iProfile</a>
+    <a class="link-name" [routerLink]="['./','booking']" routerLinkActive="active" mat-button>iBooking</a>
+    <a class="link-name" mat-raised-button (click)="Logout()">Logout</a>
+  </div>
+</mat-toolbar>
+<router-outlet>
+</router-outlet>

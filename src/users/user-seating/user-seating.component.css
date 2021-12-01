@@ -1,0 +1,57 @@
+.seating-dashboard {
+  width: 70vw;
+  height: 70vh;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.seating-container{
+  position:absolute;
+  width:50vw;
+  height:60vh;
+  display:grid;
+  place-items:center;
+  background:white;
+}
+.Seating{
+  width:60px;
+  height:50px;
+  background:green;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.seating-row1{
+    width:650px;
+    height:180px;
+    display:grid;
+   grid-template-columns: repeat(10,1fr);
+    place-items:center;
+}
+.seating-row2{
+    width:650px;
+    height:180px;
+    display:grid;
+   grid-template-columns: repeat(10,1fr);
+    place-items:center;
+}
+.seats{
+    width:55px;
+    height:25px;
+}
+.SeatingViewBtn{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+
+}
+button{
+  margin:15px;
+}
+#AS1,#AS17,#AS19,#AS5,#CS1,#CS3,#CS17,#DS2,#DS6{
+  background:red;
+  color:white;
+}

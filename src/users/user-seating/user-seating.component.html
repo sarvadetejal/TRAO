@@ -1,0 +1,64 @@
+<div class="seating-dashboard">
+  <div class="seating-container">
+    <div class="seating-row1">
+      <div class="Seating" (click)="Seat('AS1')" (click)="onChecked($event)" id="AS1">AS1</div>
+      <div class="Seating" (click)="Seat('AS3')" (click)="onChecked($event)" id="AS3">AS3</div>
+      <div class="Seating" (click)="Seat('AS5')" (click)="onChecked($event)" id="AS5">AS5</div>
+      <div class="Seating" (click)="Seat('AS7')" (click)="onChecked($event)" id="AS7">AS7</div>
+      <div class="Seating" (click)="Seat('AS9')" (click)="onChecked($event)" id="AS9">AS9</div>
+      <div class="Seating" (click)="Seat('AS11')" (click)="onChecked($event)" id="AS11">AS11</div>
+      <div class="Seating" (click)="Seat('AS13')" (click)="onChecked($event)" id="AS13">AS13</div>
+      <div class="Seating" (click)="Seat('AS15')" (click)="onChecked($event)" id="AS15">AS15</div>
+      <div class="Seating"(click)="Seat('AS17')" (click)="onChecked($event)" id="AS17">AS17</div>
+      <div class="Seating"(click)="Seat('AS19')" (click)="onChecked($event)" id="AS19">AS19</div>
+      <div class="Seating"(click)="Seat('BS2')" (click)="onChecked($event)" id="BS2">BS2</div>
+      <div class="Seating"(click)="Seat('BS4')" (click)="onChecked($event)" id="BS4">BS4</div>
+      <div class="Seating"(click)="Seat('BS6')" (click)="onChecked($event)" id="BS6">BS6</div>
+      <div class="Seating"(click)="Seat('BS8')" (click)="onChecked($event)" id="BS8">BS8</div>
+      <div class="Seating"(click)="Seat('BS10')" (click)="onChecked($event)" id="BS10">BS10</div>
+      <div class="Seating"(click)="Seat('BS12')" (click)="onChecked($event)" id="BS12">BS12</div>
+      <div class="Seating"(click)="Seat('BS14')" (click)="onChecked($event)" id="BS14">BS14</div>
+      <div class="Seating"(click)="Seat('BS16')" (click)="onChecked($event)" id="BS16">BS16</div>
+      <div class="Seating"(click)="Seat('BS18')" (click)="onChecked($event)" id="BS18">BS18</div>
+      <div class="Seating" (click)="Seat('BS20')" (click)="onChecked($event)" id="BS20">BS20</div>
+    </div>
+    <div class="seating-row2">
+      <div class="Seating"(click)="Seat('CS1')" (click)="onChecked($event)"  id="CS1">CS1</div>
+      <div class="Seating"(click)="Seat('CS3')" (click)="onChecked($event)"  id="CS3">CS3</div>
+      <div class="Seating"(click)="Seat('CS5')" (click)="onChecked($event)"  id="CS5">CS5</div>
+      <div class="Seating"(click)="Seat('CS7')" (click)="onChecked($event)"  id="CS7">CS7</div>
+      <div class="Seating"(click)="Seat('CS9')" (click)="onChecked($event)"  id="CS9">CS9</div>
+      <div class="Seating"(click)="Seat('CS11')" (click)="onChecked($event)"   id="CS11">CS11</div>
+      <div class="Seating"(click)="Seat('CS13')" (click)="onChecked($event)"   id="CS13">CS13</div>
+      <div class="Seating"(click)="Seat('CS15')" (click)="onChecked($event)"   id="CS15">CS15</div>
+      <div class="Seating"(click)="Seat('CS17')" (click)="onChecked($event)"   id="CS17">CS17</div>
+      <div class="Seating"(click)="Seat('CS19')" (click)="onChecked($event)"   id="CS19">CS19</div>
+      <div class="Seating"(click)="Seat('DS2')" (click)="onChecked($event)"  id="DS2">DS2</div>
+      <div class="Seating"(click)="Seat('DS4')" (click)="onChecked($event)"  id="DS4">DS4</div>
+      <div class="Seating"(click)="Seat('DS6')" (click)="onChecked($event)"  id="DS6">DS6</div>
+      <div class="Seating"(click)="Seat('DS8')" (click)="onChecked($event)"  id="DS8">DS8</div>
+      <div class="Seating"(click)="Seat('DS10')" (click)="onChecked($event)"   id="DS10">DS10</div>
+      <div class="Seating"(click)="Seat('DS12')" (click)="onChecked($event)"   id="DS12">DS12</div>
+      <div class="Seating"(click)="Seat('DS14')" (click)="onChecked($event)"   id="DS14">DS14</div>
+      <div class="Seating"(click)="Seat('DS16')" (click)="onChecked($event)"   id="DS16">DS16</div>
+      <div class="Seating"(click)="Seat('DS18')" (click)="onChecked($event)"   id="DS18">DS18</div>
+      <div class="Seating"(click)="Seat('DS20')" (click)="onChecked($event)"   id="DS20">DS20</div>
+    </div>
+    <div class="SeatingView">
+      <h1 mat-dialog-title>Select Seats</h1>
+
+      <div class="SeatingViewBtn" mat-dialog-actions>
+        <ng-template #template>
+          <div class="modal-body">
+            <app-passenger-details [rowseatsList]="rowseatsList1" [total1]="total"></app-passenger-details>
+          </div>
+        </ng-template>
+        <button mat-raised-button color="accent" [value]="total">
+          Total Fare {{total}}
+        </button>
+        <button mat-raised-button color="primary" (click)="openDialog(template)">Proceed to pay</button>
+
+      </div>
+    </div>
+  </div>
+</div>

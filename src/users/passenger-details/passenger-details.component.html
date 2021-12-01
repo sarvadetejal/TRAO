@@ -1,0 +1,253 @@
+<!-- <div class="Passenger-container">
+
+  <div class="Passenger_card">
+    <span>
+      Passenger Details
+    </span>
+    <div class="main-passenger-container">
+      <form [formGroup]="PassengerForm" (ngSubmit)="MakePayment()">
+        <div class="no_passContainer">
+
+          <div class="no_Passenger_Container">
+            <table>
+              <tr>
+                <td>
+                  Passenger p1
+                </td>
+              </tr>
+              <tr>
+                <td><label class="lblname">Name</label></td>
+                <td><input type="text" formControlName="PassengerName"/></td>
+                <td><label class="lblAge" >Age</label></td>
+                <td><input type="number" formControlName="PassengerAge"/></td>
+              </tr>
+              <tr>
+                <td><label class="lblname">Gender</label></td>
+                <td>
+                <mat-radio-group aria-label="Select an option"  type="text" formControlName="PassengerGender">
+                  <mat-radio-button    value="Male">Male</mat-radio-button>
+                  <mat-radio-button  value="Female">Female</mat-radio-button>
+                </mat-radio-group>
+                </td>
+                <td><label class="lblname">Seat No</label></td>
+                <td>
+                  <select type="text" formContolName="SeatId">
+                    <option value="AS1">
+                      AS1
+                    </option>
+                    <option value="AS2">
+                      AS2
+                    </option>
+                    <option value="AS3">
+                      AS3
+                    </option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="contact_detailsContainer">
+          <table>
+            <tr>
+              <th>
+                Contact Information
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Email Id
+              </td>
+              <td>
+                <input type="text" formContolName="PassengerEmail"/>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                Mobile
+              </td>
+              <td>
+                <input type="number" formContolName="PassengerPhone" />
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td>
+                <button mat-button color="accent" (click)="MakePayment()">
+                  Total Fare {{total1}}
+                </button>
+              </td>
+              <td>
+
+                <ng-template #template>
+                  <div class="modal-body">
+                    <app-user-payment [total]="total1" #app>
+                    </app-user-payment>
+                  </div>
+                </ng-template>
+                <button mat-raised-button color="primary" (click)="openDialog(template)" type="submit">
+                  Proceed Pay
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div> -->
+
+
+
+
+
+<div class="Passenger-container">
+
+  <div class="Passenger_card">
+    <span>
+      Passenger Details
+    </span>
+    <div class="main-passenger-container">
+      <form [formGroup]="PassengerForm" (ngSubmit)="MakePayment()">
+        <div class="no_passContainer">
+         
+          <div class="no_Passenger_Container" >
+            <table>
+              <tr>
+                <td>
+                  Passenger p1
+                </td>
+              </tr>
+              <tr>
+                <td><label class="lblname">Name</label></td>
+                <td><input type="text" formControlName="PassengerName" /></td>
+                <td><label class="lblAge">Age</label></td>
+                <td><input type="number" formControlName="Age"/></td>
+              </tr>
+              <tr>
+                <td><label class="lblname">Gender</label></td>
+                <td>
+                  <input type="text" name="gender"  formControlName="Gender"/>
+                </td>
+                <td><label class="lblname">Seat No</label></td>
+                <td>
+                  <select type="text" formControlName="SeatId">
+                    <option value="AS1" >
+                       AS1
+                    </option>
+                    <option value="AS2">
+                      AS2
+                   </option>
+                   <option value="AS3">
+                    AS3
+                 </option>
+                 <option value="AS4">
+                  AS4
+               </option>
+               <option value="AS5" >
+                       AS5
+                    </option>
+                    <option value="AS6">
+                      AS6
+                   </option>
+                   <option value="AS7">
+                    AS7
+                 </option>
+                 <option value="AS8">
+                  AS8
+               </option>
+               <option value="AS9" >
+                       AS9
+              </option>
+              <option value="AS10">
+                AS10
+              </option>
+              <option value="AS11">
+                AS11
+              </option>
+              <option value="AS12">
+                  AS12
+               </option>
+               <option value="AS13" >
+                  AS13
+                </option>
+                <option value="AS14">
+                  AS14
+                </option>
+                <option value="AS15">
+                    AS15
+                 </option>
+                 <option value="AS16">
+                  AS16
+               </option>
+               <option value="AS17" >
+                  AS17
+              </option>
+              <option value="AS18">
+                  AS18
+              </option>
+              <option value="AS19">
+                AS19
+              </option>
+              <option value="AS20">
+                AS20
+               </option>
+
+              </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="contact_detailsContainer">
+          <table>
+            <tr>
+              <th>
+                Contact Information
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Email Id
+              </td>
+              <td>
+                <input type="text"  formControlName="PassengerEmail"/>
+              </td>
+            </tr>
+           
+            <tr>
+              <td>
+                Mobile
+              </td>
+              <td>
+                <input type="number" formControlName="PassengerPhone" />
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td>
+                <button mat-button color="accent">
+                  Total Fare {{total1}}
+                </button>
+              </td>
+              <td>
+                <ng-template #template>
+                  <div class="modal-body">
+                    <app-user-payment [total]="total1" #app>
+                    </app-user-payment>
+                  </div>
+                </ng-template>
+                <button mat-raised-button color="primary" (click)="openDialog(template)" type="submit">
+                  Proceed Pay
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,62 @@
+*{
+   font-family: "Poppins", sans-serif;
+}
+.ad-dash-mainCont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.ad-dash-sidebar-Cont {
+  width: 20vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  box-shadow: -27px 0px 40px;
+}
+.ad-dashchild-cont {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.child-comp-container {
+  width: 75vw;
+  height: 88vh;
+  margin-top: -60px;
+  border-radius: 6px;
+  box-shadow: 2px 0px 10px -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow-y: scroll; */
+}
+.ad-dashsdbr-menus {
+  margin-top: 5.5rem;
+  width: 20vw;
+  height: 70vh;
+  display: block;
+}
+mat-accordion {
+  width: 20vw;
+}
+mat-panel-title {
+  font-size: 17px;
+  color: rgb(133, 113, 113);
+}
+.menu-btn {
+  width: 100%;
+  outline: none;
+  margin: 10px;
+}
+.admin-name {
+  font-size: 18px;
+  color: rgb(94, 46, 100);
+  margin-left: 100px;
+  padding: 15px;
+}
+.menu-items-btns {
+  display: grid;
+  place-items: center;
+}

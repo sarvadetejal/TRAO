@@ -1,0 +1,110 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.user-profile-container {
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  display: grid;
+  grid-template-columns: 18% 82%;
+}
+.user-sidebar-container {
+  background: white;
+  display: grid;
+  grid-template-rows: 100px repeat(4, 50px);
+}
+.user-profile-img {
+  background: grey;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.user-Avatar-container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 80px;
+}
+.username {
+  margin-left: -100px;
+  font-family: "Poppins", sans-serif;
+}
+.user-menu-items {
+  width: 90%;
+  height: 50px;
+  margin-left: 10px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.user-menu-items:active {
+  background: rgb(209, 191, 191);
+  color: #fff;
+}
+.user-Details-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: rgb(214, 192, 192);
+  position: relative;
+}
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+.user-card-container {
+  margin-top:-10%;
+  width: 80%;
+  height: 80vh;
+  background: white;
+  border-radius: 9px;
+  padding:10px;
+}
+.user-card-form-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* .user-card-form-container::-webkit-scrollbar {
+  width: 18px;
+}
+.user-card-form-container::-webkit-scrollbar-track {
+  background-color: grey;
+} */
+.bus-card-container {
+  margin: 40px;
+  background: white;
+  width: 92%;
+  height: 20%;
+  border: 1px solid grey;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+}
+.btn-st {
+  display: grid;
+  margin-top: 20px;
+}
+.btn-seats {
+  padding: 5px;
+  width: 150px;
+  background: #3f3351;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+.bus-card-container label {
+  margin-top: -10px;
+  display: grid;
+  place-items: center;
+}
+.bus-card-container label span {
+  margin-top: -40px;
+  font-size: 0.7rem;
+}
+.bus-card-container label:nth-child(4) {
+  margin-top: -60px;
+}

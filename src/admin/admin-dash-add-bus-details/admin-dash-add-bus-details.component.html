@@ -1,0 +1,41 @@
+<div class="Details-container">
+  <div class="addbus-container">
+    <form [formGroup]="AddBusForm" (ngSubmit)="AddBusDetails()">
+      <h3>
+        Bus Details
+      </h3>
+     <table>
+        <tr>
+         <td>Bus Name</td>
+         <td><input type="text" formControlName="BusName"/></td>
+        </tr>
+        <tr>
+          <td>Bus Plate No</td>
+          <td><input type="text" formControlName="BusNo"/></td>
+        </tr>
+        <tr>
+          <td>No of seats</td>
+          <td><input type="text" formControlName="BusSeats"></td>
+        </tr>
+        <tr>
+          <td>Bus Status</td>
+          <td><select type="text" formControlName="BusStatus">
+            <option value="1">Active</option>
+            <option value="0">Not Active</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td rowspan="2">
+          <div>
+            <button mat-raised-button color="primary" type="submit">
+              Submit
+            </button>
+          </div>
+          </td>
+        </tr>
+     </table>
+    </form>
+  </div>
+</div>

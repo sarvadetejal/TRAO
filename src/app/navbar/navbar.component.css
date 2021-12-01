@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+  font-family: Blanka-Regular;
+  src: url(../../assets/Blanka-Regular.otf);
+}
+.logo-name{
+  font-family: Blanka-Regular;
+}
+.link-name
+{
+  font-family: 'Poppins', sans-serif;
+}
+.spacer{
+  flex:1 1 auto;
+}
+span
+{
+  cursor:pointer;
+}
+mat-toolbar{
+  background:#191A19;
+  color:white;
+}
+svg{
+  width:80px;
+  height:64px;
+}
+svg text
+{
+  font-size:25px;
+  stroke:#fff;
+  animation:textAnimate 3s infinite alternate;
+}
+@keyframes textAnimate {
+  0%{
+    stroke-dasharray: 0 50%;
+  }
+  100%{
+    stroke-dasharray: 50% 0;
+  }
+}

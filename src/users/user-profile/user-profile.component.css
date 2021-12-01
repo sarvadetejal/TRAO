@@ -1,0 +1,86 @@
+*{
+  overflow-y: auto;
+}
+.user-profile-container {
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  display: grid;
+  grid-template-columns: 18% 82%;
+}
+.user-sidebar-container {
+  background: white;
+  display: grid;
+  grid-template-rows: 100px repeat(4,50px);
+}
+.user-profile-img {
+  background: grey;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.user-Avatar-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  place-items:center;
+  width: 100%;
+  height:80px;
+}
+.username{
+  margin-left:-100px;
+  font-family: "Poppins", sans-serif;
+}
+.user-menu-items{
+  width:90%;
+  height:50px;
+  margin-left:10px;
+  font-family: "Poppins", sans-serif;
+  margin-top:10px;
+  cursor:pointer;
+}
+.user-menu-items:active{
+  background:rgb(209, 191, 191);
+  color:#fff;
+}
+.user-Details-container{
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items:center;
+  background:rgb(214, 192, 192);
+  position:relative;
+}
+h4{
+  font-family: "Poppins", sans-serif;
+}
+.user-card-container{
+  width:80%;
+  height:70vh;
+  background:white;
+  border-radius:9px;
+}
+.user-card-form-container{
+  display:grid;
+  place-items: center;
+  width:100%;
+  height:100%;
+}
+form{
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items:center;
+}
+.user_nm_Dob{
+  width:100%;
+  display:grid;
+  grid-template-columns: 100px 400px;
+}
+.user_nm_Dob label
+{
+  display:grid;
+  place-items:center;
+}
+.user_DoB{
+ margin-right: -25rem;
+}

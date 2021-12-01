@@ -1,0 +1,38 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="table-responsive" id="print-section">
+        <h1 class="logo-name">
+          TRAO
+        </h1>
+        <table id="table-record">
+          <thead>
+            <tr>
+              <th>Booking Id</th>
+              <th>Source Location</th>
+              <th>Destination Location</th>
+              <th>Travelled</th>
+              <th>No of Seats Booked</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let x of data">
+              <td>{{x.bookingId}}</td>
+              <td>{{x.sourceLoc}}</td>
+              <td>{{x.destinationLoc}}</td>
+              <td>{{x.scheduleDate}}</td>
+              <td>{{x.noSeatsBooked}}</td>
+              <td>{{x.amount}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <button type="button" class="btn btn-success" [printStyle]="{h1 : {'color': 'red'}, h2 : {'border': 'solid 1px'}}"
+        printSectionId="print-section" ngxPrint>
+        <i class="fa fa-download"></i>Print</button>
+    </div>
+  </div>
+</div>

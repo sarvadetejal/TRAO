@@ -1,0 +1,16 @@
+<div class="intro-container">
+  <div class="intro-contents">
+    <h1>Login </h1>
+    <form [formGroup]="UserLoginForm" (ngSubmit)="LoginUser()">
+      <label>Email</label>
+      <input type="text" formControlName="UserEmail" name="email" id="emailID" />
+      <label>Password</label>
+      <input type="password" formControlName="UserPassword" name="password" id="password" />
+      <div></div>
+      <div class="Button-grid">
+        <button type="submit" mat-raised-button color="primary" id="login-btn">Login</button>
+        <button mat-raised-button color="warn" id="cancel-btn" >Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

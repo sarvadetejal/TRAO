@@ -1,0 +1,34 @@
+<div class="container p-0">
+  <div class="card px-4">
+    <p class="h8 py-3">Payment Details</p>
+    <div class="row gx-3">
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Person Name</p> <input class="form-control mb-3" type="text" placeholder="Name"
+            >
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Upi Id</p> <input class="form-control mb-3" type="text"
+            placeholder="78522242@apl">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Amount</p> <input class="form-control mb-3" type="text" placeholder="Enter Amount">
+        </div>
+      </div>
+      <ng-template #template>
+                  <div class="modal-body">
+                    <app-users-bookings #app>
+                    </app-users-bookings>
+                  </div>
+                </ng-template>
+      <div class="col-12">
+        <div class="btn btn-primary mb-3" (click)="openDialog(template)"> <span class="ps-3">Pay  &#x20b9;  {{total}}</span> <span
+            class="fas fa-arrow-right"></span> </div>
+      </div>
+    </div>
+  </div>
+</div>
